@@ -1,5 +1,5 @@
 import db from "../models/index"
-import userService from "../services/userService"
+//import userService from "../services/userService"
 import profileService from "../services/profileService"
 
 let getHomePage=async (req, res)=>{
@@ -14,18 +14,18 @@ let getHomePage=async (req, res)=>{
 }
 
 let getUser=(req,res)=>{
-    return res.render("user.ejs");
+    return res.render("users/user.ejs");
 }
 
 let getFindAllUsers=async (req,res)=>{
-    let data=await userService.getAllUser();
+    let data=await profileService.getAllUser();
     return res.render("users/findAllUser.ejs",{
         datalist: data
     })
 }
 
 let postUser=async(req,res)=>{
-    let message=await userService.createNewUser(req.body);
+    let message=await profileService.createNewUser(req.body);
     // console.log(req.body);
     return res.send("Post crud to server");
 }

@@ -5,11 +5,13 @@ const {
 module.exports=(sequelize, DataTypes)=>{
     class User extends Model{
         static associate(models){
-
+            User.hasOne(models.Profile, { 
+                foreignKey: 'userId',
+                as: 'profileData' // Tên alias để sau này include dữ liệu cho dễ
+            });
         }
     }
     User.init({
-        username: DataTypes.STRING,
         email: DataTypes.STRING,
         password: DataTypes.STRING
     },{
