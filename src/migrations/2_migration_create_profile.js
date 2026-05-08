@@ -27,7 +27,7 @@ module.exports={
                 type: DataTypes.STRING
             },
             birthday: {
-                type: DataTypes.DATE
+                type: DataTypes.DATEONLY
             },
             avatarUrl: {
                 type: DataTypes.STRING
