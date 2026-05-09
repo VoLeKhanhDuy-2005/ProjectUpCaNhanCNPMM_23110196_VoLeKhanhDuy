@@ -1,27 +1,41 @@
-<form action="/post-profile" method="post">
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" name="email">
-        </div>
-        <div class="form-group col-md-6">
-            <label for="password">Password</label>
-            <input type="password" class="form-control" id="password" name="password">
-        </div>
-    </div>
-    <div class="form-row">
-        <div class="form-group col-md-6">
-            <label for="fullname">Full Name</label>
-            <input type="text" class="form-control" id="fullname" name="fullname">
-        </div>
-        <div class="form-group col-md-6">
-            <label for="gender">Gender</label>
-            <select id="gender" name="gender" class="form-control">
-                <option selected value="0">Male</option>
-                <option value="1">Female</option>
-            </select>
-        </div>
-    </div>
+<div class="container">
+    <div class="row">
+        <form action="/edit-profile" method="get" enctype="multipart/form-data">
+            <input type="text" hidden class="form-control" id="userId" name="userId" value="<%=data.userId%>">
 
-    <button type="submit" class="btn btn-primary">Update</button>
-</form>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="fullName">Full Name</label>
+                    <input type="text" class="form-control" id="fullName" name="fullName"
+                    value="<%=data.fullName%>" readonly>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="gender">Gender</label>
+                    <input type="text" class="form-control" id="gender" name="gender"
+                     value="<%= data.gender == 0? 'Male': 'Female' %>" readonly>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="bio">Bio</label>
+                    <input type="text" class="form-control" id="bio" name="bio"
+                    value="<%=data.bio%>" readonly>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="birthday">Birthday</label>
+                    <input type="date" class="form-control" id="birthday" name="birthday"
+                    value="<%=data.birthday? new Date(data.birthday).toISOString().split('T')[0] : ''%>" readonly>
+                    <!-- .toISOString(): Chuyển về dạng chuỗi tiêu chuẩn
+                    .split('T')[0]: Chỉ lấy phần ngày (ví dụ: 2026-05-08) và bỏ đi phần giờ phía sau -->
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="avatar">Avatar</label>
+                    <img class="form-control" id="avatar" name="avatar" src="<%=data.imagePresignedUrl%>">
+                </div>
+
+                <button type="submit" class="btn btn-primary">Update</button>
+            </div>
+        </form>
+    </div>
+</div>

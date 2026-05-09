@@ -7,11 +7,11 @@ const storage = multer.memoryStorage();
 const upload = multer({ storage: storage });
 
 let initWebRoutes=(app)=>{
+    //router.post('/post-profile', profileController.postProfile);//
     router.get("/profile", profileController.getProfile);
-    router.post('/post-profile', profileController.postProfile);//
     router.get("/edit-profile", profileController.getEditProfile);
     router.post("/put-profile", upload.single("avatar"), profileController.putProfile);
-    //return app.use("/profile", router);//default url
-    return app.use("/", router);
+    //return app.use("/profile", router);
+    return app.use("/", router);//default url
 }
 module.exports=initWebRoutes;

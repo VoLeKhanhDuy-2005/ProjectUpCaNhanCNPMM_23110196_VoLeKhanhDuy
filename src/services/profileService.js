@@ -3,32 +3,29 @@ import db from "../models/index";
 import { raw } from "body-parser";
 import { where } from "sequelize";
 
-const salt = bcrypt.genSaltSync(10); //Thuật toán hash password
-let createNewUser = async (data) => {
-  return new Promise(async (resolve, reject) => {
-    //Dùng promise đảm bảo luôn trả về kết quả trong xử lý bất đồng bộ
-    try {
-      let hashPasswordfromBcrypt = await hashUserPassword(data.password);
-      let newUser = await db.User.create({
-        email: data.email,
-        password: hashPasswordfromBcrypt,
-      });
-      await db.Profile.create({
-        userId: newUser.id,
-        fullName: data.fullname,
-        gender: data.gender === "1" ? true : false,
-        // bio:
-        // birthday:
-        // avatarUrl:
-      });
-      resolve("OK create a new user successfully");
-      // console.log("data from service")
-      // console.log(data)
-    } catch (e) {
-      reject(e);
-    }
-  });
-};
+// const salt = bcrypt.genSaltSync(10); //Thuật toán hash password
+// let createNewUser = async (data) => {
+//   return new Promise(async (resolve, reject) => {
+//     //Dùng promise đảm bảo luôn trả về kết quả trong xử lý bất đồng bộ
+//     try {
+//       let hashPasswordfromBcrypt = await hashUserPassword(data.password);
+//       let newUser = await db.User.create({
+//         email: data.email,
+//         password: hashPasswordfromBcrypt,
+//       });
+//       await db.Profile.create({
+//         userId: newUser.id,
+//         fullName: data.fullname,
+//         gender: data.gender === "1" ? true : false,
+//       });
+//       resolve("OK create a new user successfully");
+//       // console.log("data from service")
+//       // console.log(data)
+//     } catch (e) {
+//       reject(e);
+//     }
+//   });
+// };
 
 let hashUserPassword = (password) => {
   return new Promise(async (resolve, reject) => {
@@ -75,7 +72,7 @@ let updateProfile = (data) => {
         profile.bio = data.bio;
         profile.gender = data.gender === "1" ? true : false;
         profile.birthday = data.birthday;
-        profile.avatarUrl = data.avatarUrl;
+        profile.avatarName = data.avatarName;
         await profile.save();
         resolve(profile);
       } else {
@@ -89,5 +86,5 @@ let updateProfile = (data) => {
 module.exports = {
   getInfoById: getInfoById,
   updateProfile: updateProfile,
-  createNewUser: createNewUser,
+  //createNewUser: createNewUser,
 };

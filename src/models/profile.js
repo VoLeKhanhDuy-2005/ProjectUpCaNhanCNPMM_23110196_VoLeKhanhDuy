@@ -23,7 +23,7 @@ module.exports=(sequelize, DataTypes)=>{
         gender: DataTypes.BOOLEAN,
         bio: DataTypes.STRING,
         birthday: DataTypes.DATE,
-        avatarUrl: DataTypes.STRING,
+        avatarName: DataTypes.STRING,
     }, {
         sequelize,
         modelName: "Profile",

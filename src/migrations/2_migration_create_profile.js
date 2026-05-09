@@ -29,7 +29,7 @@ module.exports={
             birthday: {
                 type: DataTypes.DATEONLY
             },
-            avatarUrl: {
+            avatarName: {
                 type: DataTypes.STRING
             },
             createdAt: {
