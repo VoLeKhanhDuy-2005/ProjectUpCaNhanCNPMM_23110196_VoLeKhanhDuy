@@ -1,6 +1,6 @@
 <div class="container">
     <div class="row">
-        <form action="/put-profile" method="post">
+        <form action="/put-profile" method="post" enctype="multipart/form-data">
             <input type="text" hidden class="form-control" id="userId" name="userId" value="<%=data.userId%>">
 
             <div class="form-row">
@@ -36,8 +36,8 @@
                 </div>
 
                 <div class="form-group col-md-6">
-                    <label for="avatarUrl">Avatar</label>
-                    <input type="text" class="form-control" id="avatarUrl" name="avatarUrl"
+                    <label for="avatar">Avatar</label>
+                    <input type="file" class="form-control" id="avatar" name="avatar"
                     value="<%=data.avatarUrl%>">
                 </div>
 

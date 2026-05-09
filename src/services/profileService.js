@@ -75,6 +75,7 @@ let updateProfile = (data) => {
         profile.bio = data.bio;
         profile.gender = data.gender === "1" ? true : false;
         profile.birthday = data.birthday;
+        profile.avatarUrl = data.avatarUrl;
         await profile.save();
         resolve(profile);
       } else {
