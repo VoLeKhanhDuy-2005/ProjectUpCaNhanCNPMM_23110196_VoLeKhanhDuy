@@ -1,0 +1,1271 @@
+{
+  "info": {
+    "_postman_id": "688750f4-e498-4715-8e40-da1f2737804b",
+    "name": "MinLish",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "48623391",
+    "_collection_link": "https://go.postman.co/collection/48623391-688750f4-e498-4715-8e40-da1f2737804b?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "get self profile",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IlVTRVIiLCJlbWFpbCI6InZsa2QxMDAxQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZHV5dm8xMjM0NSIsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Nzg0MzEwODIsImV4cCI6MTc3ODQzMTk4Mn0.vMkps6F0-xsOfuyE58Mk9oLLsBoKxjt7VnX8_X2ullA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/profile?userId=4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "profile"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "4"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get self profile",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/user/profile?userId=4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "profile"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "509"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1fd-TJodhb1mPqqlDsnlkIjSRPzRr8s\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 10 May 2026 16:42:00 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Lấy thông tin thành công\",\n    \"data\": {\n        \"id\": 4,\n        \"username\": \"duyvo12345\",\n        \"email\": \"vlkd1001@gmail.com\",\n        \"role\": \"USER\",\n        \"status\": \"ACTIVE\",\n        \"createdAt\": \"2026-05-10T09:21:43.000Z\",\n        \"updatedAt\": \"2026-05-10T09:26:12.000Z\",\n        \"profile\": {\n            \"userId\": 4,\n            \"fullname\": \"Duy Vo 13\",\n            \"phone\": null,\n            \"gender\": \"MALE\",\n            \"bio\": \"a z 13\",\n            \"avatarName\": \"7e1efd287f7bb85dd2a34f6f4bf875e3c07470d380491e5fc5e720b54974fc04\",\n            \"birthday\": \"2005-05-13\",\n            \"createdAt\": \"2026-05-10T09:21:43.000Z\",\n            \"updatedAt\": \"2026-05-10T16:38:31.000Z\"\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "get profile with userId not exists",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IlVTRVIiLCJlbWFpbCI6InZsa2QxMDAxQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZHV5dm8xMjM0NSIsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Nzg0MzEwODIsImV4cCI6MTc3ODQzMTk4Mn0.vMkps6F0-xsOfuyE58Mk9oLLsBoKxjt7VnX8_X2ullA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/profile?userId=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "profile"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get profile with userId not exists",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/user/profile?userId=1",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "profile"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "1"
+                }
+              ]
+            }
+          },
+          "status": "Not Found",
+          "code": 404,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "517"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"205-cZlFz3OWFqKWHn4CO9X0tNrWWdE\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 10 May 2026 16:41:41 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Không tìm thấy người dùng\",\n    \"errors\": [],\n    \"stack\": \"Error: Không tìm thấy người dùng\\n    at Module.getUserProfile (file:///D:/VO%20LE%20KHANH%20DUY/New%20Technologies%20In%20Software/MinLish/backend/src/modules/user/user.service.js:11:11)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)\\n    at async getProfile (file:///D:/VO%20LE%20KHANH%20DUY/New%20Technologies%20In%20Software/MinLish/backend/src/modules/user/user.controller.js:8:18)\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "get profile other user exists",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IlVTRVIiLCJlbWFpbCI6InZsa2QxMDAxQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZHV5dm8xMjM0NSIsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Nzg0MzEwODIsImV4cCI6MTc3ODQzMTk4Mn0.vMkps6F0-xsOfuyE58Mk9oLLsBoKxjt7VnX8_X2ullA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/profile?userId=5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "profile"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get profile other user exists",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "http://localhost:5000/api/v1/user/profile?userId=5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "profile"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "426"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1aa-cajVNuHChuNRlov/sb+4a90tV+E\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 10 May 2026 16:41:11 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Lấy thông tin thành công\",\n    \"data\": {\n        \"id\": 5,\n        \"username\": \"thie1234\",\n        \"email\": \"vlkduy2005@gmail.com\",\n        \"role\": \"USER\",\n        \"status\": \"ACTIVE\",\n        \"createdAt\": \"2026-05-10T14:11:09.000Z\",\n        \"updatedAt\": \"2026-05-10T14:12:12.000Z\",\n        \"profile\": {\n            \"userId\": 5,\n            \"fullname\": null,\n            \"phone\": null,\n            \"gender\": null,\n            \"bio\": null,\n            \"avatarName\": null,\n            \"birthday\": null,\n            \"createdAt\": \"2026-05-10T14:11:09.000Z\",\n            \"updatedAt\": \"2026-05-10T14:11:09.000Z\"\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "get edit self profile",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IlVTRVIiLCJlbWFpbCI6InZsa2QxMDAxQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZHV5dm8xMjM0NSIsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Nzg0MzEwODIsImV4cCI6MTc3ODQzMTk4Mn0.vMkps6F0-xsOfuyE58Mk9oLLsBoKxjt7VnX8_X2ullA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/edit-profile?userId=4",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "edit-profile"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "4"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get edit self profile",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/user/edit-profile?userId=4",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "edit-profile"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "4"
+                }
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "509"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"1fd-TJodhb1mPqqlDsnlkIjSRPzRr8s\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 10 May 2026 16:40:33 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Lấy thông tin thành công\",\n    \"data\": {\n        \"id\": 4,\n        \"username\": \"duyvo12345\",\n        \"email\": \"vlkd1001@gmail.com\",\n        \"role\": \"USER\",\n        \"status\": \"ACTIVE\",\n        \"createdAt\": \"2026-05-10T09:21:43.000Z\",\n        \"updatedAt\": \"2026-05-10T09:26:12.000Z\",\n        \"profile\": {\n            \"userId\": 4,\n            \"fullname\": \"Duy Vo 13\",\n            \"phone\": null,\n            \"gender\": \"MALE\",\n            \"bio\": \"a z 13\",\n            \"avatarName\": \"7e1efd287f7bb85dd2a34f6f4bf875e3c07470d380491e5fc5e720b54974fc04\",\n            \"birthday\": \"2005-05-13\",\n            \"createdAt\": \"2026-05-10T09:21:43.000Z\",\n            \"updatedAt\": \"2026-05-10T16:38:31.000Z\"\n        }\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "get edit profile other user exists",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IlVTRVIiLCJlbWFpbCI6InZsa2QxMDAxQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZHV5dm8xMjM0NSIsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Nzg0MzEwODIsImV4cCI6MTc3ODQzMTk4Mn0.vMkps6F0-xsOfuyE58Mk9oLLsBoKxjt7VnX8_X2ullA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/edit-profile?userId=5",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "edit-profile"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "5"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get edit profile other user exists",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/user/edit-profile?userId=5",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "edit-profile"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "5"
+                }
+              ]
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1638"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"666-yEOOaXgRd/FaRxi3wqnYoy73DaQ\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 10 May 2026 16:40:01 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Chỉ có quyền sửa profile của chính mình\",\n    \"errors\": [],\n    \"stack\": \"Error: Chỉ có quyền sửa profile của chính mình\\n    at getEditProfile (file:///D:/VO%20LE%20KHANH%20DUY/New%20Technologies%20In%20Software/MinLish/backend/src/modules/user/user.controller.js:31:10)\\n    at Layer.handle [as handle_request] (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at next (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:149:13)\\n    at protect (file:///D:/VO%20LE%20KHANH%20DUY/New%20Technologies%20In%20Software/MinLish/backend/src/middlewares/auth.middleware.js:22:5)\\n    at Layer.handle [as handle_request] (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at next (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:149:13)\\n    at Route.dispatch (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:119:3)\\n    at Layer.handle [as handle_request] (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:284:15\\n    at router.process_params (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:346:12)\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "put self profile",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IlVTRVIiLCJlbWFpbCI6InZsa2QxMDAxQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZHV5dm8xMjM0NSIsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Nzg0MzEwODIsImV4cCI6MTc3ODQzMTk4Mn0.vMkps6F0-xsOfuyE58Mk9oLLsBoKxjt7VnX8_X2ullA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "fullname",
+              "value": "Duy Vo 13",
+              "type": "text",
+              "uuid": "4807386e-e8b7-488b-afd0-080aa1680394"
+            },
+            {
+              "key": "gender",
+              "value": "MALE",
+              "type": "text",
+              "uuid": "ce2708e5-9584-46f3-a34f-7a5aa842ed26"
+            },
+            {
+              "key": "bio",
+              "value": "a z 13",
+              "type": "text",
+              "uuid": "bd4d110d-5f57-49b7-9485-6ce4fe522657"
+            },
+            {
+              "key": "birthday",
+              "value": "2005-05-13",
+              "type": "text",
+              "uuid": "be3f1aeb-b0ba-4fc4-8394-bb57b075d1d6"
+            },
+            {
+              "key": "userId",
+              "value": "4",
+              "type": "text",
+              "uuid": "9af8eccf-401a-46e9-a5fc-4ce72e653240"
+            },
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "985b2889-0f46-4cb1-8d14-16073d77c63e",
+              "src": "VZ8l2hk7_/Screenshot 2026-05-10 135543.png"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/put-profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "put-profile"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "put self profile",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "fullname",
+                  "value": "Duy Vo 13",
+                  "type": "text",
+                  "uuid": "4807386e-e8b7-488b-afd0-080aa1680394"
+                },
+                {
+                  "key": "gender",
+                  "value": "MALE",
+                  "type": "text",
+                  "uuid": "ce2708e5-9584-46f3-a34f-7a5aa842ed26"
+                },
+                {
+                  "key": "bio",
+                  "value": "a z 13",
+                  "type": "text",
+                  "uuid": "bd4d110d-5f57-49b7-9485-6ce4fe522657"
+                },
+                {
+                  "key": "birthday",
+                  "value": "2005-05-13",
+                  "type": "text",
+                  "uuid": "be3f1aeb-b0ba-4fc4-8394-bb57b075d1d6"
+                },
+                {
+                  "key": "userId",
+                  "value": "4",
+                  "type": "text",
+                  "uuid": "9af8eccf-401a-46e9-a5fc-4ce72e653240"
+                },
+                {
+                  "key": "avatar",
+                  "type": "file",
+                  "uuid": "985b2889-0f46-4cb1-8d14-16073d77c63e",
+                  "src": "VZ8l2hk7_/Screenshot 2026-05-10 135543.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/user/put-profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "put-profile"
+              ]
+            }
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "327"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"147-IoelP3Vv6QriZj3Fhn7blv9y15M\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 10 May 2026 16:38:31 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": true,\n    \"message\": \"Lấy thông tin thành công\",\n    \"data\": {\n        \"userId\": 4,\n        \"fullname\": \"Duy Vo 13\",\n        \"phone\": null,\n        \"gender\": \"MALE\",\n        \"bio\": \"a z 13\",\n        \"avatarName\": \"7e1efd287f7bb85dd2a34f6f4bf875e3c07470d380491e5fc5e720b54974fc04\",\n        \"birthday\": \"2005-05-13\",\n        \"createdAt\": \"2026-05-10T09:21:43.000Z\",\n        \"updatedAt\": \"2026-05-10T16:38:31.086Z\"\n    }\n}"
+        }
+      ]
+    },
+    {
+      "name": "put self profile userId not exists",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IlVTRVIiLCJlbWFpbCI6InZsa2QxMDAxQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZHV5dm8xMjM0NSIsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Nzg0MzIxNDcsImV4cCI6MTc3ODQzMzA0N30.Y-Ap-DpSDpvbr9p9PqSLWKR_2UeW7pl6HEmeQ7deK_w",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "fullname",
+              "value": "Duy Vo 13",
+              "type": "text",
+              "uuid": "4807386e-e8b7-488b-afd0-080aa1680394"
+            },
+            {
+              "key": "gender",
+              "value": "MALE",
+              "type": "text",
+              "uuid": "ce2708e5-9584-46f3-a34f-7a5aa842ed26"
+            },
+            {
+              "key": "bio",
+              "value": "a z 13",
+              "type": "text",
+              "uuid": "bd4d110d-5f57-49b7-9485-6ce4fe522657"
+            },
+            {
+              "key": "birthday",
+              "value": "2005-05-13",
+              "type": "text",
+              "uuid": "be3f1aeb-b0ba-4fc4-8394-bb57b075d1d6"
+            },
+            {
+              "key": "userId",
+              "value": "44",
+              "type": "text",
+              "uuid": "9af8eccf-401a-46e9-a5fc-4ce72e653240"
+            },
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "985b2889-0f46-4cb1-8d14-16073d77c63e",
+              "src": "VZ8l2hk7_/Screenshot 2026-05-10 135543.png"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/put-profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "put-profile"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "put self profile userId not exists",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "fullname",
+                  "value": "Duy Vo 13",
+                  "type": "text",
+                  "uuid": "4807386e-e8b7-488b-afd0-080aa1680394"
+                },
+                {
+                  "key": "gender",
+                  "value": "MALE",
+                  "type": "text",
+                  "uuid": "ce2708e5-9584-46f3-a34f-7a5aa842ed26"
+                },
+                {
+                  "key": "bio",
+                  "value": "a z 13",
+                  "type": "text",
+                  "uuid": "bd4d110d-5f57-49b7-9485-6ce4fe522657"
+                },
+                {
+                  "key": "birthday",
+                  "value": "2005-05-13",
+                  "type": "text",
+                  "uuid": "be3f1aeb-b0ba-4fc4-8394-bb57b075d1d6"
+                },
+                {
+                  "key": "userId",
+                  "value": "44",
+                  "type": "text",
+                  "uuid": "9af8eccf-401a-46e9-a5fc-4ce72e653240"
+                },
+                {
+                  "key": "avatar",
+                  "type": "file",
+                  "uuid": "985b2889-0f46-4cb1-8d14-16073d77c63e",
+                  "src": "VZ8l2hk7_/Screenshot 2026-05-10 135543.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/user/put-profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "put-profile"
+              ]
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1224"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"4c8-WN24r3KX0fLRw6o4ebXObPv53o4\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 10 May 2026 16:56:16 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Chỉ có quyền sửa profile của chính mình\",\n    \"errors\": [],\n    \"stack\": \"Error: Chỉ có quyền sửa profile của chính mình\\n    at putProfile (file:///D:/VO%20LE%20KHANH%20DUY/New%20Technologies%20In%20Software/MinLish/backend/src/modules/user/user.controller.js:47:10)\\n    at Layer.handle [as handle_request] (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at next (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:149:13)\\n    at done (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\multer\\\\lib\\\\make-middleware.js:47:7)\\n    at indicateDone (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\multer\\\\lib\\\\make-middleware.js:51:68)\\n    at Multipart.<anonymous> (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\multer\\\\lib\\\\make-middleware.js:168:7)\\n    at Multipart.emit (node:events:509:20)\\n    at emitCloseNT (node:internal/streams/destroy:148:10)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "put self profile valid other user exists",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IlVTRVIiLCJlbWFpbCI6InZsa2QxMDAxQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZHV5dm8xMjM0NSIsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Nzg0MzIxNDcsImV4cCI6MTc3ODQzMzA0N30.Y-Ap-DpSDpvbr9p9PqSLWKR_2UeW7pl6HEmeQ7deK_w",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "fullname",
+              "value": "Duy Vo 13",
+              "type": "text",
+              "uuid": "4807386e-e8b7-488b-afd0-080aa1680394"
+            },
+            {
+              "key": "gender",
+              "value": "MALE",
+              "type": "text",
+              "uuid": "ce2708e5-9584-46f3-a34f-7a5aa842ed26"
+            },
+            {
+              "key": "bio",
+              "value": "a z 13",
+              "type": "text",
+              "uuid": "bd4d110d-5f57-49b7-9485-6ce4fe522657"
+            },
+            {
+              "key": "birthday",
+              "value": "2005-05-13",
+              "type": "text",
+              "uuid": "be3f1aeb-b0ba-4fc4-8394-bb57b075d1d6"
+            },
+            {
+              "key": "userId",
+              "value": "5",
+              "type": "text",
+              "uuid": "9af8eccf-401a-46e9-a5fc-4ce72e653240"
+            },
+            {
+              "key": "avatar",
+              "type": "file",
+              "uuid": "985b2889-0f46-4cb1-8d14-16073d77c63e",
+              "src": "VZ8l2hk7_/Screenshot 2026-05-10 135543.png"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/put-profile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "put-profile"
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "put self profile valid other user exists",
+          "originalRequest": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "formdata",
+              "formdata": [
+                {
+                  "key": "fullname",
+                  "value": "Duy Vo 13",
+                  "type": "text",
+                  "uuid": "4807386e-e8b7-488b-afd0-080aa1680394"
+                },
+                {
+                  "key": "gender",
+                  "value": "MALE",
+                  "type": "text",
+                  "uuid": "ce2708e5-9584-46f3-a34f-7a5aa842ed26"
+                },
+                {
+                  "key": "bio",
+                  "value": "a z 13",
+                  "type": "text",
+                  "uuid": "bd4d110d-5f57-49b7-9485-6ce4fe522657"
+                },
+                {
+                  "key": "birthday",
+                  "value": "2005-05-13",
+                  "type": "text",
+                  "uuid": "be3f1aeb-b0ba-4fc4-8394-bb57b075d1d6"
+                },
+                {
+                  "key": "userId",
+                  "value": "5",
+                  "type": "text",
+                  "uuid": "9af8eccf-401a-46e9-a5fc-4ce72e653240"
+                },
+                {
+                  "key": "avatar",
+                  "type": "file",
+                  "uuid": "985b2889-0f46-4cb1-8d14-16073d77c63e",
+                  "src": "VZ8l2hk7_/Screenshot 2026-05-10 135543.png"
+                }
+              ]
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/user/put-profile",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "put-profile"
+              ]
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1224"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"4c8-WN24r3KX0fLRw6o4ebXObPv53o4\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 10 May 2026 16:57:00 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Chỉ có quyền sửa profile của chính mình\",\n    \"errors\": [],\n    \"stack\": \"Error: Chỉ có quyền sửa profile của chính mình\\n    at putProfile (file:///D:/VO%20LE%20KHANH%20DUY/New%20Technologies%20In%20Software/MinLish/backend/src/modules/user/user.controller.js:47:10)\\n    at Layer.handle [as handle_request] (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at next (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:149:13)\\n    at done (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\multer\\\\lib\\\\make-middleware.js:47:7)\\n    at indicateDone (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\multer\\\\lib\\\\make-middleware.js:51:68)\\n    at Multipart.<anonymous> (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\multer\\\\lib\\\\make-middleware.js:168:7)\\n    at Multipart.emit (node:events:509:20)\\n    at emitCloseNT (node:internal/streams/destroy:148:10)\\n    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)\"\n}"
+        }
+      ]
+    },
+    {
+      "name": "get edit profile with userId not exists",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NCwicm9sZSI6IlVTRVIiLCJlbWFpbCI6InZsa2QxMDAxQGdtYWlsLmNvbSIsInVzZXJuYW1lIjoiZHV5dm8xMjM0NSIsInR5cGUiOiJBQ0NFU1MiLCJpYXQiOjE3Nzg0MzEwODIsImV4cCI6MTc3ODQzMTk4Mn0.vMkps6F0-xsOfuyE58Mk9oLLsBoKxjt7VnX8_X2ullA",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/v1/user/edit-profile?userId=55",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5000",
+          "path": [
+            "api",
+            "v1",
+            "user",
+            "edit-profile"
+          ],
+          "query": [
+            {
+              "key": "userId",
+              "value": "55"
+            }
+          ]
+        }
+      },
+      "response": [
+        {
+          "name": "get edit profile with userId not exists",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": ""
+            },
+            "url": {
+              "raw": "http://localhost:5000/api/v1/user/edit-profile?userId=55",
+              "protocol": "http",
+              "host": [
+                "localhost"
+              ],
+              "port": "5000",
+              "path": [
+                "api",
+                "v1",
+                "user",
+                "edit-profile"
+              ],
+              "query": [
+                {
+                  "key": "userId",
+                  "value": "55"
+                }
+              ]
+            }
+          },
+          "status": "Unauthorized",
+          "code": 401,
+          "_postman_previewlanguage": null,
+          "header": [
+            {
+              "key": "X-Powered-By",
+              "value": "Express"
+            },
+            {
+              "key": "Access-Control-Allow-Origin",
+              "value": "http://localhost:3000"
+            },
+            {
+              "key": "Vary",
+              "value": "Origin"
+            },
+            {
+              "key": "Access-Control-Allow-Credentials",
+              "value": "true"
+            },
+            {
+              "key": "Content-Type",
+              "value": "application/json; charset=utf-8"
+            },
+            {
+              "key": "Content-Length",
+              "value": "1638"
+            },
+            {
+              "key": "ETag",
+              "value": "W/\"666-yEOOaXgRd/FaRxi3wqnYoy73DaQ\""
+            },
+            {
+              "key": "Date",
+              "value": "Sun, 10 May 2026 16:49:53 GMT"
+            },
+            {
+              "key": "Connection",
+              "value": "keep-alive"
+            },
+            {
+              "key": "Keep-Alive",
+              "value": "timeout=5"
+            }
+          ],
+          "cookie": [],
+          "body": "{\n    \"success\": false,\n    \"message\": \"Chỉ có quyền sửa profile của chính mình\",\n    \"errors\": [],\n    \"stack\": \"Error: Chỉ có quyền sửa profile của chính mình\\n    at getEditProfile (file:///D:/VO%20LE%20KHANH%20DUY/New%20Technologies%20In%20Software/MinLish/backend/src/modules/user/user.controller.js:31:10)\\n    at Layer.handle [as handle_request] (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at next (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:149:13)\\n    at protect (file:///D:/VO%20LE%20KHANH%20DUY/New%20Technologies%20In%20Software/MinLish/backend/src/middlewares/auth.middleware.js:22:5)\\n    at Layer.handle [as handle_request] (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at next (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:149:13)\\n    at Route.dispatch (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\route.js:119:3)\\n    at Layer.handle [as handle_request] (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\layer.js:95:5)\\n    at D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:284:15\\n    at router.process_params (D:\\\\VO LE KHANH DUY\\\\New Technologies In Software\\\\MinLish\\\\backend\\\\node_modules\\\\express\\\\lib\\\\router\\\\index.js:346:12)\"\n}"
+        }
+      ]
+    }
+  ]
+}
