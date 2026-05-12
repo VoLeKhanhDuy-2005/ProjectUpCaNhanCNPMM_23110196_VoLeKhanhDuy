@@ -1,3 +1,0 @@
-lấy profile edit:
-http://localhost:8089/edit-profile?id=2
-
